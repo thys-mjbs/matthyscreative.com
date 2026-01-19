@@ -123,3 +123,41 @@
     }
   }
   
+  /* =========================
+   Header alignment + branding
+   ========================= */
+
+.site-header-inner {
+  text-align: center;
+}
+
+.site-brand a {
+  font-size: 22px;   /* slightly bigger, not shouty */
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.site-nav {
+  margin-top: 6px;
+}
+
+.site-nav a {
+  display: inline-block;
+}
+
+/* =========================
+   Footer alignment
+   ========================= */
+
+.site-footer-inner {
+  text-align: center;
+}
+
+.site-footer-nav {
+  margin-top: 8px;
+}
+
+.site-footer-nav a {
+  display: inline-block;
+}
