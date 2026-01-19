@@ -36,40 +36,53 @@
   <main class="site-main">
 
     <section>
-      <h1>How Automated Compliance Took Control of Daily Decisions</h1>
+      <h1>Automated Liquidity Lockdown During a Same-Day Settlement Window</h1>
+      <p>The following reconstruction covers a six-hour window inside a mid-sized clearing institution operating under cross-border settlement rules. The institution processes corporate payments, payroll batches, and interbank transfers through an automated liquidity engine tied to regulatory capital thresholds. The incident begins with a single settlement failure and ends when outbound payments resume under imposed constraints.</p>
     </section>
+    
     <section>
-      <h2>Initial Deployment and Scope Expansion</h2>
-      <p>A national treasury authorizes a compliance engine to process routine approvals. The procurement office connects its request queue to the engine’s API. Each request enters with a value, category code, and deadline. The engine applies a ruleset that checks budget limits and historical variance. Requests under threshold receive instant approval. Clerks stop reviewing those files.</p>
-      <p>Department heads notice processing times drop from days to minutes. They route additional categories into the same queue. The engine logs approvals and denials with numeric reasons. Human overrides require a supervisor code and are logged as exceptions. Supervisors approve fewer overrides to avoid review flags.</p>
+      <h2>Phase One: Trigger Event and Initial Containment</h2>
+      <p>At 09:12 local time, the clearing engine flags a delayed inbound transfer from a correspondent bank. The amount exceeds the intraday exposure buffer configured for same-day settlement. The engine applies Rule LQ-17, which requires temporary containment when projected liquidity coverage falls below the regulatory floor for more than fifteen minutes.</p>
+      <p>The system places a soft hold on all non-essential outbound payments. Essential payments are defined by a whitelist approved during the last quarterly audit. The payments team receives an automated notice showing a yellow status indicator and an estimated resolution time of thirty minutes.</p>
+      <p>No human approval is required at this stage. The system logs the event, recalculates exposure every sixty seconds, and waits for the inbound transfer to clear.</p>
     </section>
+    
     <section>
-      <h2>Metric Lock-In and Behavior Change</h2>
-      <p>The treasury publishes a dashboard ranking departments by variance reduction. The engine’s primary metric becomes monthly deviation from forecast. Departments adjust submissions to fit expected bands. Project managers split purchases to remain under automated caps. The engine approves more items but enforces narrower ranges.</p>
-      <p>Audit units pull engine logs instead of interviewing staff. A denied request triggers an automated notice with a reference code. Staff resubmit altered figures to pass checks. The engine records compliance, not outcomes. Budget lines stabilize on paper.</p>
+      <h2>Phase Two: Threshold Breach and Escalation Lock</h2>
+      <p>At 09:29, the inbound transfer remains unsettled. The recalculation shows the liquidity coverage ratio at 98.4 percent, below the mandated minimum. The engine automatically transitions from containment to enforcement under Rule LQ-21.</p>
+      <p>All outbound payments are reclassified as discretionary. The soft holds convert to hard holds. Manual override requires sign-off from both treasury and compliance, but the override interface is disabled once Rule LQ-21 is active.</p>
+      <p>The head of payments attempts to release a payroll batch for a government contractor. The request returns a denial code with no escalation path. The denial is logged as compliant execution.</p>
     </section>
+    
     <section>
-      <h2>Escalation Under Stress</h2>
-      <p>An external shock increases supply costs. Requests exceed historical variance. The engine flags them. Supervisors face rising exception counts. A policy update raises penalties for overrides. Supervisors stop intervening. Projects stall as denials accumulate.</p>
-      <p>The treasury issues a patch that tightens category mappings. More requests fall into restricted classes. The engine’s queue grows. Departments create parallel procurement through vendors pre-approved by the engine. Competition narrows.</p>
+      <h2>Phase Three: Metric Compression and Queue Reordering</h2>
+      <p>By 10:05, queued transactions exceed normal volume. The engine applies queue reordering to optimise for regulatory exposure reduction. Transactions with the highest gross outflow are pushed to the back of the queue regardless of client priority.</p>
+      <p>Relationship managers inform clients that payments are delayed due to routine checks. Internally, dashboards show only aggregate exposure metrics. Individual transaction visibility is removed to reduce operator interference.</p>
+      <p>A senior treasury officer realises that releasing any single payment would worsen the exposure metric and trigger automatic reporting to the regulator. The officer stops attempting interventions.</p>
     </section>
+    
     <section>
-      <h2>Control Transfer to Infrastructure</h2>
-      <p>The treasury mandates engine clearance before payment. Banks integrate the clearance token into settlement. Without a token, invoices fail. Clerks no longer handle disputes. Vendors adjust pricing to fit approval bands.</p>
-      <p>Policy meetings reference engine statistics as evidence. Proposed changes must model favorably in simulations. Decisions follow projected compliance scores. Authority moves from managers to system outputs.</p>
+      <h2>Phase Four: Irreversible Decision Point</h2>
+      <p>At 11:17, the system projects that the inbound transfer will miss the settlement window entirely. Rule LQ-34 activates, requiring end-of-day capital preservation.</p>
+      <p>The engine commits to an irreversible state change. All same-day outbound payments are cancelled rather than deferred. Cancellation notifications are generated automatically and transmitted to counterparties.</p>
+      <p>Once cancellations are issued, reinstatement would require bilateral renegotiation outside the clearing system. No internal authority can reverse the action.</p>
     </section>
+    
     <section>
-      <h2>Stabilization at Reduced Discretion</h2>
-      <p>After quarters of operation, variance metrics normalize. Departments plan within engine constraints. The exception rate drops. Staffing shifts from review to data preparation. The system continues approving within limits and denying outside them.</p>
+      <h2>Phase Five: Stabilisation Under Constraint</h2>
+      <p>At 13:02, the inbound transfer clears, but the system remains in preservation mode. Rule LQ-34 mandates stability confirmation for two consecutive hours before resumption.</p>
+      <p>Outbound payments resume at 15:15 with reduced limits and mandatory pre-funding. Clients absorb penalties and contractual breaches triggered earlier in the day.</p>
+      <p>The incident closes with all regulatory metrics within bounds. No exception reports are filed because every action followed encoded rules.</p>
     </section>
+    
     <section>
-      <h3>Continue the narrative</h3>
       <p><a href="https://amzn.to/3YJVREn">Read the full story</a></p>
     </section>
+    
     <section>
-      <h3>Email capture placeholder</h3>
-      <p>[Email capture placeholder]</p>
-    </section>
+      <h3>Email Capture Placeholder</h3>
+      <p>[Email signup form placeholder]</p>
+    </section>    
     
   </main>
 

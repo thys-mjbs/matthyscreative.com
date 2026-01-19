@@ -36,35 +36,44 @@
   <main class="site-main">
 
     <section>
-      <h1>Why Automation Did Not Reduce Risk in Practice</h1>
+      <h1>Why Automated Safeguards Failed to Prevent a Same-Day Freeze</h1>
+      <p>This briefing examines a payment clearing incident that occurred within a single operating day. Prior to the event, stakeholders believed automated safeguards ensured continuity and human oversight. The following review shows where that belief failed during execution.</p>
     </section>
+    
     <section>
-      <h2>The Dominant Expectation</h2>
-      <p>Decision makers deploy compliance engines to remove human error. The procurement authority configures thresholds and expects consistent enforcement. Managers believe uniform rules lower exposure.</p>
-      <p>Implementation connects requests, payments, and audits to a single scoring process. Success is defined by reduced variance and faster throughput.</p>
+      <h2>Assumption: Automated Holds Are Temporary</h2>
+      <p>Pre-incident reviews assumed that automated holds function as short-lived buffers. In practice, the initial hold triggered a countdown tied to exposure recalculation intervals.</p>
+      <p>Once the inbound transfer missed its first settlement checkpoint, the hold duration extended automatically. No mechanism existed to shorten the interval without improving the underlying metric.</p>
+      <p>The safeguard operated as designed, but its temporal behaviour was misunderstood by staff who expected discretion.</p>
     </section>
+    
     <section>
-      <h2>Execution Inside Operating Units</h2>
-      <p>Clerks stop evaluating context and focus on formatting submissions. Project leads learn the scoring bands. They adjust quantities and timing. The engine approves requests that fit patterns, regardless of necessity.</p>
-      <p>Audit teams stop field reviews and rely on logs. Findings reference compliance rates. Issues outside the model remain unexamined.</p>
+      <h2>Assumption: Human Overrides Remain Available</h2>
+      <p>Policy documents stated that senior officers could override system decisions during critical operations. The override path required dual approval and audit logging.</p>
+      <p>During the incident, the escalation rule disabled the override interface to prevent non-compliant actions. The safeguard prioritised regulatory exposure over operational continuity.</p>
+      <p>Human authority existed only until the system crossed a predefined threshold.</p>
     </section>
+    
     <section>
-      <h2>Failure During Volatility</h2>
-      <p>Market shifts push costs beyond bands. The engine denies legitimate requests. Supervisors face penalties for overrides. They defer action. Operations pause.</p>
-      <p>Vendors adapt by standardizing offers to pass checks. Alternative suppliers exit. The system narrows options while reporting stability.</p>
+      <h2>Assumption: Client Priority Influences Processing</h2>
+      <p>Relationship teams believed high-priority clients would be processed first during disruptions. The queue management algorithm ignored client classification once enforcement mode activated.</p>
+      <p>Transactions were reordered strictly by their effect on exposure metrics. This produced outcomes where low-value payments cleared while critical payrolls stalled.</p>
+      <p>The safeguard optimised a single variable and discarded all others.</p>
     </section>
+    
     <section>
-      <h2>Why the Narrative Breaks</h2>
-      <p>The belief assumes rules adapt faster than conditions. In practice, updates lag. Each patch tightens controls to protect metrics. Human discretion does not return.</p>
-      <p>Risk concentrates where the model is blind. Compliance rises as resilience falls.</p>
+      <h2>Assumption: Late Clearing Restores Normality</h2>
+      <p>When the inbound transfer eventually cleared, staff expected immediate normalisation. The system required a post-event stability window before releasing controls.</p>
+      <p>By the time stability was confirmed, irreversible cancellations had already propagated externally. The safeguard prevented regulatory breach but could not repair contractual damage.</p>
     </section>
+    
     <section>
-      <h3>Explore the scenario</h3>
       <p><a href="https://amzn.to/3YJVREn">Explore the scenario</a></p>
     </section>
+    
     <section>
-      <h3>Email capture placeholder</h3>
-      <p>[Email capture placeholder]</p>
+      <h3>Email Capture Placeholder</h3>
+      <p>[Email signup form placeholder]</p>
     </section>    
     
   </main>
