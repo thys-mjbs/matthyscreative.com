@@ -161,3 +161,19 @@
 .site-footer-nav a {
   display: inline-block;
 }
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.cta-button:hover {
+  background: #333333;
+}
